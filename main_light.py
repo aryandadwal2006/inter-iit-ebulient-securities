@@ -27,9 +27,7 @@ def main():
         device = torch.device('cpu')
         print("Using CPU")
     
-    print("\n" + "="*60)
     print("STEP 1: DATA PREPARATION (MEMORY-OPTIMIZED)")
-    print("="*60)
     
     data_processor = DataProcessor(config)
     TRAIN_DAYS_START = 150
@@ -39,8 +37,6 @@ def main():
     
     print(f"\nTraining on days {TRAIN_DAYS_START}-{TRAIN_DAYS_END-1}")
     print(f"Testing on days {TEST_DAYS_START}-{TEST_DAYS_END-1}")
-    print("\nNote: Using fewer days due to 8GB RAM constraint")
-    print("For full dataset, use Google Colab with more RAM!\n")
     
     print("Loading and processing training data...")
     X_train, y_train = data_processor.prepare_training_data(
@@ -152,7 +148,7 @@ def main():
         trades_df.to_csv(trades_file, index=False)
         print(f"Trades saved to: {trades_file}")
     
-    print("EXECUTION COMPLETE!")
+    print("EXECUTION COMPLETE")
 
 if __name__ == "__main__":
     main()
