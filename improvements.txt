@@ -1,0 +1,1 @@
+Instead of chunks.append(chunk), process each chunk in-place (filtering or normalization) and write to a temporary Parquet file, to truly stream.
