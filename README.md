@@ -1,3 +1,6 @@
+
+First, clone the repo and put the EBY dataset folder containing csv files in same folder as the python files
+
 conda create -n tft_trading python=3.9
 
 conda activate tft_trading
@@ -12,19 +15,19 @@ pip install -r requirements.txt
 
 python main_enhanced.py
 
-# Skip already completed steps
+Skip already completed steps
 python main_enhanced.py --skip-conversion --skip-data-prep
 
-# Adjust hyperparameter tuning
+Adjust hyperparameter tuning
 python main_enhanced.py --tuning-trials 100
 
-# Customize data splits
+Customize data splits
 python main_enhanced.py --train-end 200 --val-end 240
 
-# Skip tuning (use default hyperparameters)
+Skip tuning (use default hyperparameters)
 python main_enhanced.py --skip-tuning
 
-# Only backtest (requires trained model)
+Only backtest (requires trained model)
 python main_enhanced.py --skip-conversion --skip-data-prep --skip-tuning --skip-training
 
 My architecture is:-
