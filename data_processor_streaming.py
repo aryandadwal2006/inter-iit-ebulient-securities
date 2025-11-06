@@ -173,9 +173,7 @@ class StreamingDataProcessor:
         return sequence_idx
     
     def prepare_training_data(self, train_days: List[int], val_days: List[int], test_days: List[int]):
-        print("="*60)
         print("PREPARING TRAINING DATA")
-        print("="*60)
         if not self.stats_computed:
             self.compute_feature_statistics(train_days, sample_rate=0.2)
         print("\n1. Processing training data...")
